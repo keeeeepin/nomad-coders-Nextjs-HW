@@ -1,4 +1,4 @@
-import { BASE_URL } from '../../../(home)/page';
+import { BASE_URL } from '../../../constants';
 
 import BookCardLists from '../../../../components/category-detail/bookCardLists';
 

@@ -3,7 +3,7 @@ import styles from './book-category.module.css';
 import Link from 'next/link';
 
 // API
-import { BASE_URL } from '../../app/(home)/page';
+import { BASE_URL } from '../../app/constants';
 
 // async function
 async function getBookCategories() {
