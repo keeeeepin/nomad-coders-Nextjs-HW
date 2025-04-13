@@ -1,0 +1,40 @@
+.nav {
+    width: 85%; 
+    height: 20px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; /* left 속성 대신 left와 right를 0으로 설정 */
+    
+    padding: 2rem;
+    margin-left: auto;
+    margin-right: auto; /* 자동 마진으로 중앙 정렬 */
+    
+    background-color: rgb(253, 253, 252);
+    color: rgb(64, 62, 62);
+    
+    display: flex;
+    align-items: center;
+    z-index: 1000;
+    /* justify-content: space-between;  */
+
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* 왼쪽 아이콘 스타일 */
+  .home {
+    color: rgb(18, 17, 17);
+    font-weight: 500;
+    margin-right: 2vw; /* 왼쪽 여백 추가 */
+    cursor: pointer;
+  }
+  
+  /* 오른쪽 메뉴 스타일 */
+  .about {
+    font-weight: 500;
+    margin-right: 5%; /* 오른쪽 여백 추가 */
+    cursor: pointer;
+  }
+
+  

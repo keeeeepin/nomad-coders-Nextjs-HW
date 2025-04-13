@@ -1,0 +1,79 @@
+.bookCategoryContainer {
+    margin-top: 20px; 
+    width: 86.5%;
+    padding: 20px; 
+
+    /* background-color: #f7f3e9; */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.bookWrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    min-width: 150px;
+    max-width: 700px;
+
+    width: auto;
+    height: 60px;
+
+    margin-bottom: 10%;
+    margin-left: 5%;
+    margin-right: 50px;
+    padding: 10px 60px 10px 45px;
+
+    background-color: rgb(218, 225, 211);
+
+
+    font-size: 15px;
+    white-space: nowrap; /* 한 줄에 모두 표시되도록 */
+    
+    /* 책갈피 디자인 */
+    clip-path: polygon(0% 0%, 85% 0%, 100% 50%, 85% 100%, 0% 100%);
+    mask-image: radial-gradient(circle at 10% 50%, transparent 4px, black 1px);
+    transition: clip-path 0.3s ease, background-color 0.3s, ease scale 0.3s;
+
+    border-radius: 10% 40% 5% 25%;
+}
+
+
+.bookWrapper:hover {
+    clip-path: polygon(0% 0%, 85% 0%, 90% 50%, 85% 100%, 0% 100%);
+    background-color: #a7d2ad;
+    text-decoration: none;
+    cursor: pointer;
+    scale: 1.05;
+    animation: updown 2s ease-in-out infinite;  
+
+}
+
+@keyframes updown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-5px);
+    }
+    100% {
+        transform: tranlateY(0px);
+    }
+}
+
+
+.category {
+
+    color: black;
+
+    margin: 0 15% 0 25%;
+}

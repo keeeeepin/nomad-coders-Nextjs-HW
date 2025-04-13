@@ -1,0 +1,18 @@
+.loadingContainer {
+    width: 300px;
+    height: 200px;
+
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.loading {
+    color: rgb(76, 60, 60);
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 50px;
+}
