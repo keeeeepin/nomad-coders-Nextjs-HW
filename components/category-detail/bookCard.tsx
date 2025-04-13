@@ -1,5 +1,4 @@
 import styels from './bookCard.module.css';
-import { Tooltip } from 'react-tooltip';
 
 interface Book {
   amazon_product_url: string;
@@ -26,14 +25,9 @@ export default function BookCard({ book }: BookCardProps) {
         <div className={styels.bookTitle}>{book.title}</div>
         <div className={styels.author}>{book.author}</div>
 
-        <div
-          className={styels.buyBtn}
-          onClick={() => window.open(`${book.amazon_product_url}`)}
-          data-tooltip-id={safeId}
-        >
+        <div className={styels.buyBtn} onClick={() => window.open(`${book.amazon_product_url}`)}>
           BUY
         </div>
-        <Tooltip className={styels.tooltip} id={safeId} content="go amazon" place="bottom" offset={15} />
       </div>
     </>
   );
