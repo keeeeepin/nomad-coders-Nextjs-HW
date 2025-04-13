@@ -14,11 +14,13 @@ interface Book {
 
 interface BookCardListsProps {
   books: Book[];
+  category: string;
 }
 
-export default function BookCardLists({ books }: BookCardListsProps) {
+export default function BookCardLists({ books, category }: BookCardListsProps) {
   return (
     <>
+      <div className={styles.currentCategory}>{category}</div>
       <div className={styles.bookCardListsContainer}>
         {books.map((book) => (
           <BookCard key={book.rank} book={book} />

@@ -4,7 +4,6 @@
     width: 200px;
     height: 320px;
 
-    /* 입체감 */
     perspective: 1000px;
     transform-style: preserve-3d; /**/
 
@@ -94,5 +93,4 @@
 
 .buyBtn:hover {
     background-color: rgb(228, 228, 202);
-
 }

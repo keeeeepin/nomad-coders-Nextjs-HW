@@ -26,5 +26,9 @@ export default async function CategoryDetail({ params }: { params: Promise<{ cat
   const category = (await params).category;
   const books = await getCategoryBooks(category);
 
-  return <BookCardLists books={books.results.books} />;
+  return (
+    <>
+      <BookCardLists books={books.results.books} category={category} />
+    </>
+  );
 }
