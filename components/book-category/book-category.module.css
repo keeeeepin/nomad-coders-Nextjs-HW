@@ -3,7 +3,6 @@
     width: 86.5%;
     padding: 20px; 
 
-    /* background-color: #f7f3e9; */
     box-shadow: 5px -2px 5px rgba(225, 203, 203, 0.7);
     display: flex;
     flex-wrap: wrap;
@@ -71,8 +70,6 @@
 
 
 .category {
-
     color: black;
-
     margin: 0 15% 0 25%;
 }

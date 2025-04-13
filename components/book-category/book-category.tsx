@@ -1,16 +1,11 @@
 import styles from './book-category.module.css';
 
 import Link from 'next/link';
-
-// API
 import { BASE_URL } from '../../app/constants';
 
-// async function
 async function getBookCategories() {
   const response = await fetch(`${BASE_URL}/lists`);
-
   const json = await response.json();
-  console.log(json);
   return json;
 }
 

@@ -1,7 +1,6 @@
 import { BASE_URL } from '../../../constants';
 
 import BookCardLists from '../../../../components/category-detail/bookCardLists';
-import { Metadata } from 'next';
 
 async function getCategoryBooks(category: string) {
   console.log(category);
