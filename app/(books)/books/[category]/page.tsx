@@ -1,8 +1,9 @@
 import { BASE_URL } from '../../../constants';
 
 import BookCardLists from '../../../../components/category-detail/bookCardLists';
+import { Metadata } from 'next';
 
-async function getCategoryBooks({ category }: { category: string }) {
+async function getCategoryBooks(category: string) {
   console.log(category);
 
   const response = await fetch(`${BASE_URL}/list?name=${category}`);
@@ -13,18 +14,17 @@ async function getCategoryBooks({ category }: { category: string }) {
   return json;
 }
 
-export async function generateMetadata({ params }: { params: { category: string } }) {
-  const { category } = params;
-
+export async function generateMetadata({ params }: { params: Promise<{ category: string }> }) {
+  const category = (await params).category;
   return {
     title: `${category} Books`,
     description: `Explore the best selling ${category} books`,
   };
 }
 
-export default async function CategoryDetail({ params }: { params: { category: string } }) {
-  const { category } = params;
-  const books = await getCategoryBooks({ category });
+export default async function CategoryDetail({ params }: { params: Promise<{ category: string }> }) {
+  const category = (await params).category;
+  const books = await getCategoryBooks(category);
 
   return <BookCardLists books={books.results.books} />;
 }
